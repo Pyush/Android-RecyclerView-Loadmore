@@ -1,1 +1,6 @@
-RecyclerView Loadmore and Swipe refresh for LinearLayout GridLayout and StaggeredLayout
+RecyclerView Loadmore and Swipe refresh
+- LinearLayout 
+- GridLayout 
+- StaggeredLayout 
+
+![Android Recyclerview Loadmore](https://github.com/Pyush/Android-RecyclerView-Loadmore/blob/master/android-recyclerview-loadmore-gif.gif)
