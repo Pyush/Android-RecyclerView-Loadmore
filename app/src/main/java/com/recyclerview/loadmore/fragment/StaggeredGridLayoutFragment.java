@@ -112,8 +112,6 @@ public class StaggeredGridLayoutFragment extends Fragment {
         });
 
         recyclerview.addOnScrollListener(scrollListener);
-
-        recyclerview.addOnScrollListener(scrollListener);
     }
 
     private void setAdapter() {

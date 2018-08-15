@@ -117,8 +117,6 @@ public class LinearLayoutFragment extends Fragment {
         });
 
         recyclerview.addOnScrollListener(scrollListener);
-
-        recyclerview.addOnScrollListener(scrollListener);
     }
 
     private void LoadMoreData() {
