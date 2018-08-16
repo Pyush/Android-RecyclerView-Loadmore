@@ -1,4 +1,4 @@
-package com.recyclerview.loadmore.viewholder;
+package com.recyclerview.loadmore.model
 
 /*
  * MIT License
@@ -24,16 +24,28 @@ package com.recyclerview.loadmore.viewholder;
  * SOFTWARE.
  */
 
-import android.support.v7.widget.RecyclerView;
-import android.view.View;
+import com.recyclerview.loadmore.utils.Constant
+import java.util.*
 
 /**
- * Created by Piyush on 1/3/2017.
+ * Created by Piyush on 1/10/2017.
  */
 
-public class LinearHolder extends RecyclerView.ViewHolder {
+class DataView {
 
-    public LinearHolder(View itemView) {
-        super(itemView);
+    var name: String = ""
+    var viewType: Int = Constant.VIEW_TYPE_ITEM
+
+    companion object {
+
+        fun getDataViews(size: Int): MutableList<DataView> {
+            val dataViews = ArrayList<DataView>()
+            for (i in 0 until size) {
+                val dataView = DataView()
+                dataView.name = "Test: $i"
+                dataViews.add(dataView)
+            }
+            return dataViews
+        }
     }
 }

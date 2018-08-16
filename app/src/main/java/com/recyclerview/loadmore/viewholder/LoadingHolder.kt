@@ -1,4 +1,4 @@
-package com.recyclerview.loadmore.model;
+package com.recyclerview.loadmore.viewholder
 
 /*
  * MIT License
@@ -24,33 +24,10 @@ package com.recyclerview.loadmore.model;
  * SOFTWARE.
  */
 
-import java.util.ArrayList;
-import java.util.List;
+import android.support.v7.widget.RecyclerView
+import android.view.View
 
 /**
- * Created by Piyush on 1/10/2017.
+ * Created by Piyush on 1/3/2017.
  */
-
-public class DataView {
-
-    String name;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-
-    public static List<DataView> getDataViews(int size) {
-        List<DataView> dataViews=new ArrayList<>();
-        for(int i=0;i<size;i++) {
-            DataView dataView=new DataView();
-            dataView.setName("Test: "+i);
-            dataViews.add(dataView);
-        }
-        return dataViews;
-    }
-}
+class LoadingHolder(itemView: View) : RecyclerView.ViewHolder(itemView)

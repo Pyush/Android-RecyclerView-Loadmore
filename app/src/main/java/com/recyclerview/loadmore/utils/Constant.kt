@@ -1,4 +1,4 @@
-package com.recyclerview.loadmore.viewholder;
+package com.recyclerview.loadmore.utils
 
 /*
  * MIT License
@@ -24,15 +24,10 @@ package com.recyclerview.loadmore.viewholder;
  * SOFTWARE.
  */
 
-import android.support.v7.widget.RecyclerView;
-import android.view.View;
-
 /**
- * Created by Piyush on 1/3/2017.
+ * Created by Piyush on 1/10/2017.
  */
-public class GridHolder extends RecyclerView.ViewHolder {
-
-    public GridHolder(View itemView) {
-        super(itemView);
-    }
+object Constant {
+    val VIEW_TYPE_ITEM = 0
+    val VIEW_TYPE_LOADING = 1
 }

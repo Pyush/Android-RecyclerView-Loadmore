@@ -1,4 +1,4 @@
-package com.recyclerview.loadmore.listener;
+package com.recyclerview.loadmore.viewholder
 
 /*
  * MIT License
@@ -24,9 +24,11 @@ package com.recyclerview.loadmore.listener;
  * SOFTWARE.
  */
 
+import android.support.v7.widget.RecyclerView
+import android.view.View
+
 /**
  * Created by Piyush on 1/3/2017.
  */
-public interface OnLoadMoreListener {
-    void onLoadMore();
-}
+
+class LinearHolder(itemView: View) : RecyclerView.ViewHolder(itemView)

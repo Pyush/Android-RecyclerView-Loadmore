@@ -1,4 +1,4 @@
-package com.recyclerview.loadmore.viewholder;
+package com.recyclerview.loadmore.listener
 
 /*
  * MIT License
@@ -24,16 +24,9 @@ package com.recyclerview.loadmore.viewholder;
  * SOFTWARE.
  */
 
-import android.support.v7.widget.RecyclerView;
-import android.view.View;
-
 /**
  * Created by Piyush on 1/3/2017.
  */
-
-public class StaggeredHolder extends RecyclerView.ViewHolder {
-
-    public StaggeredHolder(View itemView) {
-        super(itemView);
-    }
+interface OnLoadMoreListener {
+    fun onLoadMore()
 }

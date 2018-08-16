@@ -1,6 +1,6 @@
-package com.recyclerview.loadmore.utils;
+package com.recyclerview.loadmore.widget
 
-/*
+/**
  * MIT License
  *
  * Copyright (c) 2017 Piyush
@@ -24,10 +24,22 @@ package com.recyclerview.loadmore.utils;
  * SOFTWARE.
  */
 
+import android.graphics.Rect
+import android.support.v7.widget.RecyclerView
+import android.view.View
+
 /**
- * Created by Piyush on 1/10/2017.
+ * Created by Piyush on 1/11/2017.
  */
-public class Constant {
-    public static final int VIEW_TYPE_ITEM = 0;
-    public static final int VIEW_TYPE_LOADING = 1;
+
+class StaggerdSpacesItemDecoration(private val mSpace: Int) : RecyclerView.ItemDecoration() {
+
+    override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
+        outRect.left = mSpace
+        outRect.right = mSpace
+        outRect.bottom = mSpace
+        // Add top margin only for the first item to avoid double space between items
+        if (parent.getChildAdapterPosition(view) == 0)
+            outRect.top = mSpace
+    }
 }
