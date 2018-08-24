@@ -84,7 +84,7 @@ class StaggeredAdapter(internal var dataViews: MutableList<DataView>?) : Recycle
             val loadingHolder = holder
         }
 
-        if (dataView == null) {
+        if (dataView.viewType == Constant.VIEW_TYPE_LOADING) {
             // Span the item if active
             val lp = holder.itemView.layoutParams
             if (lp is StaggeredGridLayoutManager.LayoutParams) {
@@ -106,6 +106,6 @@ class StaggeredAdapter(internal var dataViews: MutableList<DataView>?) : Recycle
     }
 
     override fun getItemViewType(position: Int): Int {
-        return if (dataViews!![position] == null) Constant.VIEW_TYPE_LOADING else Constant.VIEW_TYPE_ITEM
+        return if (dataViews!![position].viewType == Constant.VIEW_TYPE_LOADING) Constant.VIEW_TYPE_LOADING else Constant.VIEW_TYPE_ITEM
     }
 }

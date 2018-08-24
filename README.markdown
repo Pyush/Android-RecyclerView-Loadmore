@@ -3,7 +3,6 @@ RecyclerView Loadmore and Swipe refresh
 - GridLayout 
 - StaggeredLayout 
 
-
 Master branch has **JAVA** code
 
 Kotlin branch has **KOTLIN** code.

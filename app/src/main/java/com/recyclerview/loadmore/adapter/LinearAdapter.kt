@@ -83,6 +83,7 @@ class LinearAdapter(internal var dataViews: MutableList<DataView>?) : RecyclerVi
     }
 
     override fun getItemViewType(position: Int): Int {
-        return if (dataViews!![position] == null) Constant.VIEW_TYPE_LOADING else Constant.VIEW_TYPE_ITEM
+        return if (dataViews!![position].viewType == Constant.VIEW_TYPE_LOADING) Constant.VIEW_TYPE_LOADING else Constant
+        .VIEW_TYPE_ITEM
     }
 }
